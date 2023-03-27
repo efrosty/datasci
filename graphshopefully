@@ -1,1 +1,16 @@
+import pandas as pd
+import matplotlib.pyplot as plt
 
+# create a sample dataframe
+data = {'string1': ['foo', 'bar', 'baz', 'qux'],
+        'string2': ['A', 'B', 'C', 'D'],
+        'integer': [10, 20, 30, 40]}
+df = pd.DataFrame(data)
+
+# create the scatter plot
+plt.scatter(df['string1'], df['integer'], c=df['string2'])
+plt.xlabel('String1')
+plt.ylabel('Integer')
+plt.show()
+
+\
